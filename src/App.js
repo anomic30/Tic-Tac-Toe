@@ -18,6 +18,7 @@ function App() {
     } else {
       setPlayer("X");
     }
+    // eslint-disable-next-line
   }, [board]);
 
   useEffect(() => {
