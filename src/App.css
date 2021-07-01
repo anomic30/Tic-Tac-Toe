@@ -1,38 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
 .App {
-  text-align: center;
+  width: 100vw;
+  height: 94vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+  background-color: #d8dede;
+background-image: linear-gradient(315deg, #d8dede 0%, #e5bdf6 74%);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body{
+  padding: 0;
+  margin: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.board{
+  width: 500px;
+  height: 500px;
+  background-color: rgb(127, 101, 223);
+  border: 2px solid black;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  box-shadow: 5px 5px 5px rgb(165, 164, 164);
+}
+
+.row{
+  flex: 33.33%;
+  display: flex;
+  flex-direction: row;
+  /* border: 2px solid black; */
+}
+
+.square{
+  flex: 33%;
+  height: 100%;
+  border: 2px solid black;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  font-size: 80px;
+  color: black;
+  transition: 0.2s;
+}
+
+.square:active{
+  background-color: rgb(86, 45, 235);
+}
+
+button{
+  width: 100px;
+  height: 50px;
+  border: none;
+  box-shadow: 2px 2px 5px rgb(107, 106, 106);
+  transition: 0.3s;
+  border-radius: 5px;
+  font-size: 20px;
+  background-color: rgb(231, 232, 233);
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+}
+
+button:active{
+  box-shadow: none;
+}
+
+h1{
+  font-family: 'Pacifico', cursive;
+  font-size: 40px;
+}
+
+.footer{
+  height: 6vh;
+  width: 100%;
+  background-color: rgb(29, 27, 27);
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  gap: 5px;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media only screen and (max-width: 600px) {
+  .board{
+    width: 20rem;
+    height: 20rem;
   }
-  to {
-    transform: rotate(360deg);
+
+  .square{
+    font-size: 50px
   }
 }
