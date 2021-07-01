@@ -2,6 +2,8 @@ import { useState, useEffect } from 'react';
 import './App.css';
 import Square from './Components/Square';
 import { Patterns } from './Components/Patterns';
+import github from './github.png';
+import linkedin from './linkedin.png';
 
 function App() {
   const [board, setBoard] = useState(["", "", "", "", "", "", "", "", ""]);
@@ -92,7 +94,8 @@ function App() {
         <button onClick={restart}>Restart</button>
       </div>
       <div className="footer">
-        
+        <a href="https://github.com/anomic30"><img src={github} alt="" height="32px" /></a>
+        <a href="https://www.linkedin.com/in/anomic/"><img src={linkedin} alt="" height="32px"/></a>
       </div>
     </>
   );
