@@ -4,6 +4,8 @@ import Square from './Components/Square';
 import { Patterns } from './Components/Patterns';
 import github from './github.png';
 import linkedin from './linkedin.png';
+import Modal from './Components/Modal.jsx'
+import './Components/Modal.css';
 
 function App() {
   const [board, setBoard] = useState(["", "", "", "", "", "", "", "", ""]);
@@ -24,7 +26,7 @@ function App() {
   useEffect(() => {
     if (result.state !== "none") {
       setTimeout(() => {
-        alert(`Game finished! Winning player: ${result.winner}`);
+        // alert(`Game finished! Winning player: ${result.winner}`);
         setBoard(["", "", "", "", "", "", "", "", ""]);
       }, 200)
     }
@@ -69,13 +71,19 @@ function App() {
 
   const restart = () => {
     setBoard(["", "", "", "", "", "", "", "", ""]);
+    setPlayer("O");
+  }
+
+  const modalReset = () => {
+    setResult({ winner: "none"})
   }
 
   return (
     <>
       <div className="App">
         <h1>Tic-Tac-Toe</h1>
-        <div className="board">
+        {result.winner !== "none" ? <Modal winner={result.winner} showModal={modalReset} /> :
+          <div className="board">
           <div className="row">
             <Square val={board[0]} chooseSquare={() => { chooseSquare(0) }} />
             <Square val={board[1]} chooseSquare={() => { chooseSquare(1) }} />
@@ -92,6 +100,7 @@ function App() {
             <Square val={board[8]} chooseSquare={() => { chooseSquare(8) }} />
           </div>
         </div>
+        }
         <button onClick={restart}>Restart</button>
       </div>
       <div className="footer">

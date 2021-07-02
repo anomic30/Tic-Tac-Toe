@@ -1,0 +1,21 @@
+.container{
+    height: 400px;
+    width: 400px;
+    background-color: white;
+    border-radius:20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.container h1{
+    color: rgb(108, 63, 214);
+    font-size: 50px;
+}
+
+.container button{
+    width: 150px;
+}
