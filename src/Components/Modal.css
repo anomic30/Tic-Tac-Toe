@@ -1,6 +1,6 @@
 .container{
-    height: 400px;
-    width: 400px;
+    height: 500px;
+    width: 500px;
     background-color: white;
     border-radius:20px;
     display: flex;
@@ -14,8 +14,19 @@
 .container h1{
     color: rgb(108, 63, 214);
     font-size: 50px;
+    margin: 0;
 }
 
 .container button{
     width: 150px;
+    background-color: rgb(108, 63, 214);
+    color: rgb(255, 255, 255);
+    margin-top: 30px;
+}
+
+@media only screen and (max-width: 600px) {
+    .container{
+        height: 25rem;
+        width: 20rem;
+    }    
 }
