@@ -79,16 +79,6 @@ h1{
   font-size: 40px;
 }
 
-.footer{
-  height: 6vh;
-  width: 100%;
-  background-color: rgb(29, 27, 27);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-}
-
 @media only screen and (max-width: 600px) {
   .board{
     width: 20rem;

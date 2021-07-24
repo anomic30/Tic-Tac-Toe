@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import '../Styles/Modal.css';
 
 const Modal = ({winner, showModal}) => {
     return (
